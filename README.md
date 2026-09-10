@@ -1,5 +1,6 @@
 # Physics-Informed Neural Networks (PINN) Framework for Scientific Computing
 
+[![CI Verification](https://github.com/jamshaidal/physics-informed-ml-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/jamshaidal/physics-informed-ml-framework/actions/workflows/ci.yml)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Field](https://img.shields.io/badge/Field-Scientific%20Machine%20Learning-blue)](#)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -8,7 +9,7 @@ A modular, research-grade PyTorch implementation of Physics-Informed Neural Netw
 
 ---
 
-## 🔬 Mathematical Formulation
+## Mathematical Formulation
 
 Standard deep learning models act as black-box approximators. A Physics-Informed Neural Network constrains the solution space by embedding the governing partial differential equation (PDE) directly into the loss function via **automatic differentiation (AD)**:
 
@@ -25,7 +26,7 @@ $$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{data}} + \lambda_{\text{pde}} 
 
 ---
 
-## 🛠️ Supported Physical Systems
+## Supported Physical Systems
 
 - **Reaction-Diffusion Dynamics:** Non-linear chemical kinetics and pattern formation.
 - **Wave & Helmholtz Equations:** High-frequency oscillatory wave propagation.
@@ -34,7 +35,7 @@ $$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{data}} + \lambda_{\text{pde}} 
 
 ---
 
-## 📊 Evaluation & Convergence Metrics
+## Evaluation & Convergence Metrics
 
 | PDE Formulation | Optimizer Strategy | Collocation Points | Relative $L_2$ Error | Residual Norm $\|\mathcal{N}[u]\|$ |
 | :--- | :--- | :--- | :--- | :--- |
@@ -44,18 +45,39 @@ $$\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{data}} + \lambda_{\text{pde}} 
 
 ---
 
-## 💻 Quickstart
+## Quickstart & Verification
 
 ```bash
 git clone https://github.com/jamshaidal/physics-informed-ml-framework.git
 cd physics-informed-ml-framework
 pip install -r requirements.txt
-python train_pinn.py --pde burgers --epochs 5000
+
+# Run automated verification test suite
+python verify_pinn_benchmarks.py
+
+# Train 1D Viscous Burgers' solver
+python train_pinn.py --pde burgers --epochs 2000
 ```
 
 ---
 
-## 👨‍💻 Author & Inquiries
+## Citation
+
+If you utilize this PINN architecture, PDE solvers, or benchmark suite in your research, please cite:
+
+```bibtex
+@software{ali2026pinn_framework,
+  author       = {Ali, Muhammad Jamshaid},
+  title        = {Physics-Informed Neural Networks Framework for Scientific Differential Equations},
+  year         = {2026},
+  url          = {https://github.com/jamshaidal/physics-informed-ml-framework}
+}
+```
+You can also view the machine-readable [`CITATION.cff`](CITATION.cff) file or click **"Cite this repository"** in the GitHub sidebar.
+
+---
+
+## Inquiries
 
 **Muhammad Jamshaid Ali**  
 Computational Physics & Scientific Machine Learning Researcher  
