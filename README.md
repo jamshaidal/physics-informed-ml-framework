@@ -1,5 +1,6 @@
 # Physics-Informed Neural Networks (PINN) Framework for Scientific Computing
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jamshaidal/physics-informed-ml-framework/blob/main/notebooks/pinn_burgers_harmonic_tutorial.ipynb)
 [![CI Verification](https://github.com/jamshaidal/physics-informed-ml-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/jamshaidal/physics-informed-ml-framework/actions/workflows/ci.yml)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Field](https://img.shields.io/badge/Field-Scientific%20Machine%20Learning-blue)](#)
